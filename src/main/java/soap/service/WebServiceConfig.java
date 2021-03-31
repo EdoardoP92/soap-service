@@ -39,4 +39,10 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	public XsdSchema countriesSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("countries.xsd"));
 	}
+	
+	@Bean
+	public CustomTomcatConnector customTomcatConnector() {
+		CustomTomcatConnector ret = new CustomTomcatConnector();
+		return ret;
+	}
 }
